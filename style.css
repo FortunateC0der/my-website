@@ -24,4 +24,76 @@ body {
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
   }
+  .split-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .left-side,
+  .right-side {
+    flex: 1;
+    padding: 2rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .center-face {
+    flex: 0 0 300px;
+    z-index: 1;
+  }
+  
+  .center-face img {
+    width: 100%;
+    height: auto;
+    border-left: 3px solid #007acc;
+    border-right: 3px solid #007acc;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  span.designer {
+    color: red;
+    font-weight: bold;
+  }
+  
+  span.coder {
+    color: #007acc;
+    font-weight: bold;
+  }
+  
+  .arrow-button {
+    position: absolute;
+    bottom: 2rem;
+    background: none;
+    border: 2px solid #007acc;
+    color: #007acc;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .arrow-button:hover {
+    background: #007acc;
+    color: white;
+  }
+  
+  .arrow-button.left {
+    left: 2rem;
+  }
+  
+  .arrow-button.right {
+    right: 2rem;
+  }
   
