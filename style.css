@@ -1,60 +1,92 @@
-/* body {
-    font-family: Arial, sans-serif;
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
-    background: #f5f5f5;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
     color: #333;
-  }/*  */
-  
-  header {
-    background: #007acc;
-    color: white;
-    text-align: center;
-    padding: 2rem;
   }
   
-  /* section {
-    padding: 1.5rem 2rem;
-    max-width: 800px;
-    margin: auto;
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
   }
   
-  h2 {
-    border-bottom: 2px solid #007acc;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-  } */ */
-  .split-intro {
+  .logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: white;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
+    gap: 0.5rem;
   }
   
-  .left-side,
-  .right-side {
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    height: 100vh;
+    padding-top: 4rem;
+  }
+  
+  .side {
     flex: 1;
     padding: 2rem;
-    color: #333;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    align-items: center;
+    text-align: center;
   }
   
-  .center-face {
+  .face {
     flex: 0 0 300px;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .center-face img {
-    width: 100%;
-    height: auto;
-    border-left: 3px solid #007acc;
-    border-right: 3px solid #007acc;
+  .face img {
+    height: 100%;
+    width: auto;
+    max-height: 90vh;
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
   }
   
   h2 {
@@ -62,38 +94,51 @@
     margin-bottom: 1rem;
   }
   
-  span.designer {
+  .designer {
     color: red;
     font-weight: bold;
   }
   
-  span.coder {
+  .coder {
     color: #007acc;
     font-weight: bold;
   }
   
-  .arrow-button {
-    position: absolute;
-    bottom: 2rem;
-    background: none;
-    border: 2px solid #007acc;
-    color: #007acc;
-    font-size: 2rem;
+  .arrow-btn {
+    margin-top: 2rem;
     padding: 0.5rem 1rem;
+    font-size: 2rem;
+    background: none;
+    color: #000;
+    border: 2px solid #000;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
   }
   
-  .arrow-button:hover {
-    background: #007acc;
-    color: white;
+  .arrow-btn:hover {
+    background: #000;
+    color: #fff;
   }
   
-  .arrow-button.left {
-    left: 2rem;
-  }
+  /* Responsive Design */
+  @media (max-width: 960px) {
+    .hero {
+      flex-direction: column;
+    }
   
-  .arrow-button.right {
-    right: 2rem;
+    .face img {
+      max-height: 50vh;
+      border: none;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   
