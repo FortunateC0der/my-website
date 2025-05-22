@@ -1,151 +1,55 @@
-/* Reset and base styles */
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
   }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff;
-    color: #333;
-  }
-  
-  /* Navbar */
-  .navbar {
+
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #111;
     padding: 1rem 2rem;
-    background: #000;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
   }
-  
+
   .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .logo img {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .logo span {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
-  
+
   .nav-links {
     list-style: none;
-    display: flex;              /* Makes the list horizontal */
-    gap: 1.5rem;                /* Space between links */
+    display: flex;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
   }
-  
+
   .nav-links li {
-    display: inline-block;      /* Optional but reinforces inline layout */
+    display: inline-block;
   }
-  
+
   .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
   }
-  
+
   .nav-links a:hover {
     text-decoration: underline;
   }
-  
-  
-  /* Hero Section */
-  .hero {
-    display: flex;
-    height: 100vh;
-    padding-top: 4rem;
-  }
-  
-  .side {
-    flex: 1;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .face {
-    flex: 0 0 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .face img {
-    height: 100%;
-    width: auto;
-    max-height: 90vh;
-    border-left: 3px solid #000;
-    border-right: 3px solid #000;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .designer {
-    color: red;
-    font-weight: bold;
-  }
-  
-  .coder {
-    color: #007acc;
-    font-weight: bold;
-  }
-  
-  .arrow-btn {
-    margin-top: 2rem;
-    padding: 0.5rem 1rem;
-    font-size: 2rem;
-    background: none;
-    color: #000;
-    border: 2px solid #000;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .arrow-btn:hover {
-    background: #000;
-    color: #fff;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 960px) {
-    .hero {
-      flex-direction: column;
-    }
-  
-    .face img {
-      max-height: 50vh;
-      border: none;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    .navbar {
+
+  /* Responsive menu (optional) */
+  @media (max-width: 768px) {
+    header {
       flex-direction: column;
       align-items: flex-start;
     }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
   }
-  
